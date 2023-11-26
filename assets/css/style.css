@@ -1,0 +1,187 @@
+/*
+Theme Name: JavaScript Product Modal
+Author: MD Elias Mia
+Author URI: https://eliasmia.com/
+Front End Developer: MD Elias Mia
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: rgb(229, 0, 80);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  overflow-x: hidden;
+  color: rgb(68, 68, 68);
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 0.9;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(68, 68, 68);
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6E6F70;
+  line-height: 30px;
+}
+
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #337ab7;
+}
+
+a, a:hover, a:focus {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: inherit;
+}
+
+a {
+  transition: all 700ms ease;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+.main-container {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.product-block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 18px 0 #e0e0e0;
+  border-radius: 10px;
+  margin: auto 5px 30px;
+  max-width: 24%;
+  min-width: 24%;
+}
+.product-item .product-item-img {
+  position: relative;
+  overflow: hidden;
+}
+.product-info{
+  padding: 15px;
+}
+.product-info h4 {
+  color: #000102;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.product-info p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6F70;
+  line-height: 24px;
+}
+.js-modal-more{
+  background: #2596be;
+  border: 1px solid #2596be;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+}
+.js-modal-more:hover{
+  background: #fff;
+  border: 1px solid #2596be;
+  color: #2596be;
+}
+.js-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  max-width: 500px;
+  min-height: 500px;
+  margin: 1.75rem auto;
+}
+.js-modal .product-item{
+  max-width: 100%;
+  min-width: 100%;
+  margin: 0;
+}
+.js-modal-close{
+  position: absolute;
+  right: 5px;
+  top: -10px;
+  color: #fff;
+  font-size: 62px;
+  line-height: 60px;
+  z-index: 9;
+}
+.js-modal-close:hover{
+  color: #fff;
+}
+.js-modal-overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+  opacity: 0.5;
+}
+.display-none{
+  display: none;
+}
